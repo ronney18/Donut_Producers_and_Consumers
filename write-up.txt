@@ -1,0 +1,102 @@
+Name: Ronney Sanchez
+Date: 3/30/19
+Assignment 4
+Course: COMP3080 Operating System
+Email: Ronney_Sanchez@student.uml.edu
+
+My degree of sucess for this assignment is an 80%. I got all my producers and consumers
+to work properly. Unfortunately, I am having problems in submitting the first 10
+dozens of donuts from any of the 5 consumers to a file. If I try to write these in
+a file, my program also writes the entire output from the console to the file as
+well which is way more than what I need specifically.
+
+I experimented with my program for a while. I started my program with 30 producers
+and 50 consumers with a QUEUE size of 200 collecting 200 dozens. When I ran my 
+program for 5 loops a couple of times, I relatively get 3-4 deadlocks out of 5 
+loops which means I get 1-2 successful runs. I found out that the probability 
+of getting a deadlock with this QUEUE size is high around 80% of the time.
+
+I then brought the QUEUE size up to 600 and my probability of getting deadlock
+went down to 50%. I believe that this is the 50% mark because when I ran my program
+a couple of times again. I get 2-3 dealocks out of 5 loops. At this size, it is
+equally likely to get deadlock.
+
+I then brought my QUEUE size up to 1000 and my probability of getting deadlock
+went down to 10% of the time. I have learned that when my QUEUE size increases
+my chances of getting deadlock decreases because the more space the producer
+has, the more choices the consumers has in collecting donuts.
+
+The distribution of this graph over the depth of the QUEUE is almost linear
+with a slight curve. I consider using linear regression for an estimate of the
+probability.
+
+
+100% | *    *  *  *        CHANCES OF GETTING DEADLOCK OVER SIZE OF QUEUE WITH 30 PRODUCERS AND 50 CONSUMERS COLLECTING 200 DOZEN
+     |              *   *
+     |                     *
+90%  |                         *
+     |                              *
+     |                                  *
+80%  |                                      *
+     |                                         *
+70%  |                                             *
+     |                                                 *
+60%  |  PROBABILITY OF DEADLOCK                           *
+     |                                                       *
+50%  |                                                         *
+     |                                                            *
+40%  |                                                               *
+     |                                                                   *
+30%  |                                                                      *
+     |                                                                           *
+20%  |                                                                                *
+     |                                                                                        *
+10%  |                                                                                              *     *      *
+     |--------------DEPTH OF THE QUEUE---------------------------------------------------------------------------------*--
+0%      0       100      200      300      400      500      600      700      800      900      1000      1100      1200
+
+
+I then took my 600 QUEUE size, which is my 50% chance of getting deadlock, and 
+experimented with the changes of number of dozens. I brought my number of dozens 
+down to 100 and when I ran my program again for 5 loops, I got roughly 0-1 deadlock
+out of the 5 loops. My probability of getting deadlock is 20% when collecting only
+100 dozens.
+
+I then brought my number of dozens up to 150 and I got roughly 1-2 deadlocks
+out of 5 loops. I realized that my chances of getting deadlock went up to 30%.
+
+I then changed my number of dozens up to 250 and my probability of getting deadlock
+went up to 75% because I was getting 3-4 deadlocks out of 5 loops in the shell run.
+I then changed my number of dozens up to 300 and I was getting 4-5 deadlock out of
+the 5 loops in which it went up to 85%.
+
+I learned that when my maximum number of dozens increases, my probability of getting
+deadlock increases because the more number of dozens increases, the more donuts the
+consumer has to collect in order to be full with limited space for the producers
+in which if the producers run out of space with no options left over for the consumers,
+the consumers get left hanging in the program.
+
+
+100% |                      CHANCES OF GETTING DEADLOCK OVER NUMBER OF DOZENS WITH 30 PRODUCERS AND 50 CONSUMERS
+     |
+     |                                                                                                                         *
+90%  |                                                                                                                    *
+     |                                                                                                               *
+     |                                                                                                          *
+80%  |                                                                                                    *
+     |                                                                                               *
+70%  |                                                                                          *
+     |                                                                                     *
+60%  |  PROBABILITY OF DEADLOCK                                                       *
+     |                                                                           *
+50%  |                                                                       *
+     |                                                                    *
+40%  |                                                                 *
+     |                                                             *
+30%  |                                                        *
+     |                                           *       *
+20%  |                                    *
+     |                              *
+10%  |                   *     *
+     |-----------*--NUMBER OF DOZENS-------------------------------------------------------------------------------------------------
+0%      0       25      50      75      100      125      150      175      200      225      250      275      300      325      350

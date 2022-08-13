@@ -1,0 +1,26 @@
+
+
+
+100% | *    *  *  *        CHANCES OF GETTING DEADLOCK OVER SIZE OF QUEUE WITH 30 PRODUCERS AND 50 CONSUMERS COLLECTING 200 DOZEN
+     |              *   *
+     |                     *
+90%  |                         *
+     |                              *
+     |                                  *
+80%  |                                      *
+     |                                         *
+70%  |                                             *
+     |                                                 *
+60%  |  PROBABILITY OF DEADLOCK                           *
+     |                                                       *
+50%  |                                                         *
+     |                                                            *
+40%  |                                                               *
+     |                                                                   *
+30%  |                                                                      *
+     |                                                                           *
+20%  |                                                                                *
+     |                                                                                        *
+10%  |                                                                                              *     *      *
+     |--------------DEPTH OF THE QUEUE---------------------------------------------------------------------------------*--
+0%      0       100      200      300      400      500      600      700      800      900      1000      1100      1200
